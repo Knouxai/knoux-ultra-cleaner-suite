@@ -8,6 +8,10 @@ import Index from "./pages/Index";
 import HealthAICenter from "./pages/HealthAICenter";
 import HyperCleanEngine from "./pages/HyperCleanEngine";
 import PerformanceReactor from "./pages/PerformanceReactor";
+import DriverSoftwareHub from "./pages/DriverSoftwareHub";
+import SecurityVault from "./pages/SecurityVault";
+import DeepAnalysisLogs from "./pages/DeepAnalysisLogs";
+import AdvancedToolsLab from "./pages/AdvancedToolsLab";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
@@ -24,6 +28,10 @@ const App = () => (
           <Route path="/health-ai-center" element={<HealthAICenter />} />
           <Route path="/hyper-clean-engine" element={<HyperCleanEngine />} />
           <Route path="/performance-reactor" element={<PerformanceReactor />} />
+          <Route path="/driver-software-hub" element={<DriverSoftwareHub />} />
+          <Route path="/security-vault" element={<SecurityVault />} />
+          <Route path="/deep-analysis-logs" element={<DeepAnalysisLogs />} />
+          <Route path="/advanced-tools-lab" element={<AdvancedToolsLab />} />
           <Route path="/settings" element={<Settings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

@@ -1,24 +1,42 @@
 
 import React from 'react';
-import { Moon, Sun, Shield, Cpu, Zap } from 'lucide-react';
+import { Moon, Sun, Shield, Cpu, Zap, Settings, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 interface KnouxHeaderProps {
   darkMode: boolean;
   onThemeToggle: () => void;
   onBlackDiamondAccess: () => void;
+  onSettingsClick?: () => void;
 }
 
 const KnouxHeader: React.FC<KnouxHeaderProps> = ({ 
   darkMode, 
   onThemeToggle, 
-  onBlackDiamondAccess 
+  onBlackDiamondAccess,
+  onSettingsClick 
 }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   return (
     <header className="glass-card rounded-2xl p-6 mb-8">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <div className="relative">
+          {!isHomePage && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => navigate('/')}
+              className="glass-button rounded-full mr-2"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </Button>
+          )}
+          
+          <div className="relative cursor-pointer" onClick={() => navigate('/')}>
             <div className="w-16 h-16 glass-card rounded-full flex items-center justify-center pulse-glow">
               <Shield className="w-8 h-8 text-primary" />
             </div>
@@ -27,7 +45,7 @@ const KnouxHeader: React.FC<KnouxHeaderProps> = ({
             </div>
           </div>
           <div>
-            <h1 className="text-3xl font-bold neon-glow">
+            <h1 className="text-3xl font-bold neon-glow cursor-pointer" onClick={() => navigate('/')}>
               Knoux CleanMaster Ultra™
             </h1>
             <p className="text-muted-foreground">
@@ -49,6 +67,17 @@ const KnouxHeader: React.FC<KnouxHeaderProps> = ({
               <Moon className="w-5 h-5" />
             )}
           </Button>
+          
+          {onSettingsClick && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={onSettingsClick}
+              className="glass-button rounded-full"
+            >
+              <Settings className="w-5 h-5" />
+            </Button>
+          )}
           
           <Button
             onClick={onBlackDiamondAccess}

@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { Heart, Zap, Wrench, Shield, Search, FlaskConical, Brain } from 'lucide-react';
+import { Heart, Zap, Wrench, Shield, Search, FlaskConical, Brain, Settings as SettingsIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import KnouxHeader from '@/components/KnouxHeader';
 import SectionCard from '@/components/SectionCard';
 import SystemStatus from '@/components/SystemStatus';
@@ -9,6 +10,7 @@ import BlackDiamondModal from '@/components/BlackDiamondModal';
 const Index = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [showBlackDiamond, setShowBlackDiamond] = useState(false);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     if (darkMode) {
@@ -24,6 +26,7 @@ const Index = () => {
       description: 'مركز الصحة الذكي',
       icon: Heart,
       color: 'bg-gradient-to-r from-blue-500 to-purple-600',
+      route: '/health-ai-center',
       services: [
         'تحليل صحة النظام AI',
         'التنبؤ بالأعطال المستقبلية',
@@ -39,6 +42,7 @@ const Index = () => {
       description: 'محرك التنظيف الفائق',
       icon: Zap,
       color: 'bg-gradient-to-r from-green-500 to-emerald-600',
+      route: '/hyper-clean-engine',
       services: [
         'تنظيف الملفات المؤقتة',
         'إزالة مخلفات التحديثات',
@@ -54,6 +58,7 @@ const Index = () => {
       description: 'مفاعل الأداء',
       icon: Zap,
       color: 'bg-gradient-to-r from-red-500 to-pink-600',
+      route: '/performance-reactor',
       services: [
         'إدارة العمليات الثقيلة',
         'تسريع الإقلاع',
@@ -69,6 +74,7 @@ const Index = () => {
       description: 'مركز البرامج والتعريفات',
       icon: Wrench,
       color: 'bg-gradient-to-r from-orange-500 to-yellow-600',
+      route: '/driver-software-hub',
       services: [
         'تحديث الدرايفرات',
         'تحليل التوافق',
@@ -84,6 +90,7 @@ const Index = () => {
       description: 'خزنة الأمان',
       icon: Shield,
       color: 'bg-gradient-to-r from-indigo-500 to-purple-600',
+      route: '/security-vault',
       services: [
         'إزالة ملفات التجسس',
         'فحص البرمجيات الخفية',
@@ -99,6 +106,7 @@ const Index = () => {
       description: 'التحليل العميق',
       icon: Search,
       color: 'bg-gradient-to-r from-teal-500 to-cyan-600',
+      route: '/deep-analysis-logs',
       services: [
         'تحليل القرص',
         'رسومات بيانية للأداء',
@@ -114,6 +122,7 @@ const Index = () => {
       description: 'مختبر الأدوات',
       icon: FlaskConical,
       color: 'bg-gradient-to-r from-violet-500 to-purple-600',
+      route: '/advanced-tools-lab',
       services: [
         'إزالة البرامج بالقوة',
         'فاحص الإقلاع',
@@ -133,6 +142,7 @@ const Index = () => {
           darkMode={darkMode}
           onThemeToggle={() => setDarkMode(!darkMode)}
           onBlackDiamondAccess={() => setShowBlackDiamond(true)}
+          onSettingsClick={() => navigate('/settings')}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-8">
@@ -146,7 +156,7 @@ const Index = () => {
                   icon={section.icon}
                   services={section.services}
                   color={section.color}
-                  onClick={() => console.log(`Opening ${section.title}`)}
+                  onClick={() => navigate(section.route)}
                 />
               ))}
             </div>

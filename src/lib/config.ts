@@ -77,12 +77,13 @@ export interface SystemHealth {
 
 export const getSystemHealth = (): SystemHealth => {
   // Simulated system data - in real app this would come from system APIs
+  // Adjusted ranges to avoid critical warnings in normal operation
   return {
-    cpu: Math.floor(Math.random() * 100),
-    memory: Math.floor(Math.random() * 100),
-    storage: Math.floor(Math.random() * 100),
-    battery: Math.floor(Math.random() * 100),
-    network: Math.floor(Math.random() * 100),
+    cpu: Math.floor(Math.random() * 60) + 20, // 20-80%
+    memory: Math.floor(Math.random() * 50) + 30, // 30-80%
+    storage: Math.floor(Math.random() * 30) + 50, // 50-80% (usage, so 20-50% free)
+    battery: Math.floor(Math.random() * 60) + 40, // 40-100%
+    network: Math.floor(Math.random() * 70) + 30, // 30-100%
     overall: 98, // Fixed high value for demo
   };
 };

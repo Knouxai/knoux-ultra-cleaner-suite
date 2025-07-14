@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +11,9 @@ import DriverSoftwareHub from "./pages/DriverSoftwareHub";
 import SecurityVault from "./pages/SecurityVault";
 import DeepAnalysisLogs from "./pages/DeepAnalysisLogs";
 import AdvancedToolsLab from "./pages/AdvancedToolsLab";
+import AdvancedToolsHub from "./pages/AdvancedToolsHub";
+import KnouxUltraHub from "./pages/KnouxUltraHub";
+import CosmicToolsLab from "./pages/CosmicToolsLab";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
@@ -32,6 +34,9 @@ const App = () => (
           <Route path="/security-vault" element={<SecurityVault />} />
           <Route path="/deep-analysis-logs" element={<DeepAnalysisLogs />} />
           <Route path="/advanced-tools-lab" element={<AdvancedToolsLab />} />
+          <Route path="/advanced-tools-hub" element={<AdvancedToolsHub />} />
+          <Route path="/knoux-ultra-hub" element={<KnouxUltraHub />} />
+          <Route path="/cosmic-tools-lab" element={<CosmicToolsLab />} />
           <Route path="/settings" element={<Settings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

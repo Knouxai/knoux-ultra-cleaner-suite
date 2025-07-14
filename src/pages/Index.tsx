@@ -406,7 +406,7 @@ const Index = () => {
         },
         {
           id: "molecular-view",
-          name: "رؤية جزيئية",
+          name: "��ؤية جزيئية",
           description: "تحليل دقيق",
           icon: Eye,
           type: "info" as const,
@@ -723,11 +723,14 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
-              <Brain className="w-8 h-8 text-blue-400 mx-auto mb-2 group-hover:animate-pulse" />
-              <h4 className="font-semibold text-sm">التحكم الكوني</h4>
+            <div
+              className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group"
+              onClick={() => setShowDedupliXAI(true)}
+            >
+              <Brain className="w-8 h-8 text-purple-400 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">DedupliX AI™</h4>
               <p className="text-xs text-muted-foreground">
-                إدارة الواقع الرقمي
+                إزالة التكرارات الذكية
               </p>
             </div>
           </div>

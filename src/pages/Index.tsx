@@ -120,7 +120,7 @@ const Index = () => {
         "وقت الاستجابة": "0.3ms",
         "دقة ال��شخيص": "99.7%",
         "عمليات ناجحة": 15420,
-        "طاقة AI": "∞",
+        "طاق�� AI": "∞",
       },
     },
     {
@@ -265,7 +265,7 @@ const Index = () => {
         "كشف البرامج الشبحية",
         "تحليل التوافق الجيني",
         "استقدام من بعد آخر",
-        "إصلاح الحمض النووي",
+        "إصلاح الحم�� النووي",
       ],
       actions: [
         {
@@ -430,7 +430,7 @@ const Index = () => {
     },
   ];
 
-  // معلومات النظام الحية
+  // معلومات النظام ال��ية
   const liveSystemData = [
     {
       name: "نبض النظام",
@@ -607,7 +607,7 @@ const Index = () => {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center pulse-glow">
-                <Settings className="w-6 h-6 text-white" />
+                <SettingsIcon className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-bold neon-glow">

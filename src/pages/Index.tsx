@@ -35,6 +35,7 @@ import UltraServiceCard from "@/components/UltraServiceCard";
 import SystemStatus from "@/components/SystemStatus";
 import BlackDiamondModal from "@/components/BlackDiamondModal";
 import KnouxAISidekick from "@/components/KnouxAISidekick";
+import MatrixViewMode from "@/components/MatrixViewMode";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -113,7 +114,7 @@ const Index = () => {
         },
         {
           id: "boost",
-          name: "تعزيز صحي",
+          name: "تعز��ز صحي",
           description: "تحسين الأداء",
           icon: TrendingUp,
           type: "primary" as const,
@@ -154,7 +155,7 @@ const Index = () => {
         {
           id: "quantum-clean",
           name: "تنظيف كمي",
-          description: "تنظيف مت��دد الأبعاد",
+          description: "تنظيف متعدد الأبعاد",
           icon: Sparkles,
           type: "primary" as const,
         },
@@ -262,7 +263,7 @@ const Index = () => {
       status: "ACTIVE" as const,
       route: "/driver-software-hub",
       services: [
-        "تحديث التعريفات الفوري",
+        "تحديث الت��ريفات الفوري",
         "تحليل التوافق الكمي",
         "نسخ احتياطي بعدي",
         "إزالة التعريفات المتحجرة",
@@ -344,7 +345,7 @@ const Index = () => {
         {
           id: "threat-scan",
           name: "فحص التهديدات",
-          description: "كشف الأخط��ر",
+          description: "كشف الأخطار",
           icon: Search,
           type: "info" as const,
         },
@@ -376,7 +377,7 @@ const Index = () => {
       title: "Deep Analysis & Logs",
       titleAr: "مختبر التحليل العميق",
       description:
-        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات على المستوى الجزيئي",
+        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات ��لى المستوى الجزيئي",
       icon: Search,
       color: "from-teal-500 via-cyan-500 to-blue-600",
       level: "EXPERT" as const,
@@ -384,7 +385,7 @@ const Index = () => {
       status: "READY" as const,
       route: "/deep-analysis-logs",
       services: [
-        "تحليل القرص ��لذري",
+        "تحليل القرص الذري",
         "رسومات بيانية هولوجرافية",
         "عرض السجلات الزمنية",
         "تتبع تغييرات الكموم",
@@ -671,7 +672,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-rainbow">
-                    Omega Update 1.1 - النقلة التطويرية الكبرى
+                    Omega Update 1.1 - النقلة التطويرية الك��رى
                   </h3>
                   <p className="text-muted-foreground">
                     من الكمال إلى ما وراء الخيال • 10 ميزات ثورية قادمة

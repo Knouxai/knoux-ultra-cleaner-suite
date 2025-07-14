@@ -169,7 +169,7 @@ const Index = () => {
         },
         {
           id: "auto-schedule",
-          name: "جدولة ذكية",
+          name: "ج��ولة ذكية",
           description: "تنظيف تلقائي",
           icon: Activity,
           type: "secondary" as const,
@@ -247,7 +247,7 @@ const Index = () => {
         "سرعة المعالج": "+340%",
         "ذاكرة محررة": "15.8 GB",
         "وقت الإقلاع": "3.2s",
-        "طاقة مولدة": "2.4 TW",
+        "طاقة م��لدة": "2.4 TW",
         "عمليات/ثانية": "∞",
         "كفاءة نووية": "99.99%",
       },
@@ -393,7 +393,7 @@ const Index = () => {
         "تحليل التطبيقات العصبي",
         "كش�� الملفات المكررة الكمي",
         "سجل النظام AI",
-        "تحليل البصمة الرقمية",
+        "تحل��ل البصمة الرقمية",
         "رؤية الأبعاد المخفية",
       ],
       actions: [
@@ -481,7 +481,7 @@ const Index = () => {
           onSettingsClick={() => navigate("/settings")}
         />
 
-        {/* شريط الحالة المتقدم */}
+        {/* شريط الحالة ا��متقدم */}
         <div className="glass-card rounded-2xl p-6 mb-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-purple-600/10 animate-pulse" />
 
@@ -781,11 +781,14 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <div
+                className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group"
+                onClick={() => setShowDedupliXAI(true)}
+              >
                 <Brain className="w-8 h-8 text-red-400 mx-auto mb-2 group-hover:animate-pulse" />
-                <h4 className="font-semibold text-sm">Neural-Sync™</h4>
+                <h4 className="font-semibold text-sm">DedupliX AI™ الجديد!</h4>
                 <p className="text-xs text-muted-foreground">
-                  تعلم من سلوك المستخدم
+                  إزالة التكرارات ب��كاء خارق
                 </p>
               </div>
             </div>
@@ -811,7 +814,7 @@ const Index = () => {
               "كنوكس ماشي معاك في رحلة الكون الرقمي 🚀✨"
             </h2>
             <p className="text-gray-300 text-lg">
-              أول نظام ذكاء كوني متكامل في الكون • تقنيات ما وراء المستقبل
+              أول نظام ��كاء كوني متكامل في الكون • تقنيات ما وراء المستقبل
             </p>
           </div>
         </div>

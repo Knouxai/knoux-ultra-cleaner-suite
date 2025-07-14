@@ -86,7 +86,7 @@ const KnouxUltraHub = () => {
         },
         {
           name: "تحليل المحتوى العميق",
-          desc: "مقارنة النصوص والأكواد",
+          desc: "مقارنة النصوص والأك��اد",
           active: true,
         },
         {
@@ -154,7 +154,7 @@ const KnouxUltraHub = () => {
     },
     {
       id: "plasma-forge",
-      title: "مطرقة ال��لازما الخارقة",
+      title: "مطرقة ال����ازما الخارقة",
       subtitle: "Plasma Forge Hammer",
       description:
         "أداة قوية لتفكيك وإعادة بناء مكونات النظام على المستوى الذري",
@@ -242,7 +242,7 @@ const KnouxUltraHub = () => {
       abilities: [
         { name: "إعادة تشكيل الواقع", desc: "تغيير بنية النظام", active: true },
         { name: "خلق عوالم", desc: "إنشاء بيئات افتراضية", active: false },
-        { name: "تحويل المادة", desc: "تحويل نوع الملفات", active: true },
+        { name: "تحويل المادة", desc: "تح��يل نوع الملفات", active: true },
         { name: "السيطرة المطلقة", desc: "تحكم كامل في النظام", active: true },
       ],
       stats: { realities_shaped: 3, universes_created: 1, divine_power: 100 },
@@ -275,9 +275,13 @@ const KnouxUltraHub = () => {
                   backdrop-blur-xl hover:backdrop-blur-2xl
                   ${activeHologram === service.id ? "ring-4 ring-white/50 scale-105" : ""}
                   ${service.glowColor} hover:shadow-2xl`}
-      onClick={() =>
-        setActiveHologram(activeHologram === service.id ? null : service.id)
-      }
+      onClick={() => {
+        if (service.id === "deduplix-ai") {
+          setShowDedupliXAI(true);
+        } else {
+          setActiveHologram(activeHologram === service.id ? null : service.id);
+        }
+      }}
     >
       {/* خلفية الهولوجرام */}
       <div

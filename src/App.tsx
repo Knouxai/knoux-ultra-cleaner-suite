@@ -11,6 +11,7 @@ import DriverSoftwareHub from "./pages/DriverSoftwareHub";
 import SecurityVault from "./pages/SecurityVault";
 import DeepAnalysisLogs from "./pages/DeepAnalysisLogs";
 import AdvancedToolsLab from "./pages/AdvancedToolsLab";
+import AdvancedToolsHub from "./pages/AdvancedToolsHub";
 import KnouxUltraHub from "./pages/KnouxUltraHub";
 import CosmicToolsLab from "./pages/CosmicToolsLab";
 import Settings from "./pages/Settings";

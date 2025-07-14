@@ -13,7 +13,34 @@ setTimeout(() => {
   reportGenerator.printComprehensiveReport();
 }, 5000);
 
+// Check for storage issues and show emergency cleanup if needed
+setTimeout(() => {
+  const diagnostics = KnouxDiagnostics.getInstance();
+  const report = diagnostics.generateReport();
+
+  // Check if there are any storage-related errors
+  const hasStorageError = report.errors.some((error) =>
+    error.includes("Storage critically low"),
+  );
+
+  if (hasStorageError) {
+    console.warn(
+      "🚨 Storage critically low detected! Emergency cleanup recommended.",
+    );
+    // Dispatch custom event for UI components to listen to
+    window.dispatchEvent(
+      new CustomEvent("storageEmergency", {
+        detail: {
+          message: "Storage critically low",
+          recommendation: "Run emergency cleanup",
+        },
+      }),
+    );
+  }
+}, 3000);
+
 // Make reporting available globally for manual access
 (window as any).KnouxReporting = KnouxReportGenerator.getInstance();
+(window as any).KnouxDiagnostics = KnouxDiagnostics.getInstance();
 
 createRoot(document.getElementById("root")!).render(<App />);

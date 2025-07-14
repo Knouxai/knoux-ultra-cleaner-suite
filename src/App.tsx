@@ -15,6 +15,7 @@ import AdvancedToolsHub from "./pages/AdvancedToolsHub";
 import KnouxUltraHub from "./pages/KnouxUltraHub";
 import CosmicToolsLab from "./pages/CosmicToolsLab";
 import Settings from "./pages/Settings";
+import OmegaRoadmap from "./pages/OmegaRoadmap";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

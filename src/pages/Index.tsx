@@ -47,6 +47,7 @@ const Index = () => {
   const [systemPulse, setSystemPulse] = useState(98);
   const [activeHolo, setActiveHolo] = useState<string | null>(null);
   const [showAISidekick, setShowAISidekick] = useState(true);
+  const [showMatrixView, setShowMatrixView] = useState(false);
   const navigate = useNavigate();
 
   // تأثير النبض الحي للنظام
@@ -83,7 +84,7 @@ const Index = () => {
         "تحليل صحة النظام AI",
         "التنبؤ بالأعطال المستقبلية",
         "مراقبة الموارد الحيوية",
-        "ت��صيات الصيانة الذكية",
+        "ت��صيات ال��يانة الذكية",
         "فحص صحة البطارية",
         "التحليل البيئي المتقدم",
         "نظام الإنذار المبكر",
@@ -114,7 +115,7 @@ const Index = () => {
         },
         {
           id: "boost",
-          name: "تعز��ز صحي",
+          name: "تعزيز صحي",
           description: "تحسين الأداء",
           icon: TrendingUp,
           type: "primary" as const,
@@ -263,13 +264,13 @@ const Index = () => {
       status: "ACTIVE" as const,
       route: "/driver-software-hub",
       services: [
-        "تحديث الت��ريفات الفوري",
+        "تحديث التعريفات الفوري",
         "تحليل التوافق الكمي",
         "نسخ احتياطي بعدي",
         "إزالة التعريفات المتحجرة",
         "ت��ديث البرامج التلقائي",
         "كشف البرامج الشبحية",
-        "تحليل التوافق الجيني",
+        "تحليل التوافق الجين��",
         "استقدام من بعد آخر",
         "إصلاح الحمض النووي",
       ],
@@ -377,7 +378,7 @@ const Index = () => {
       title: "Deep Analysis & Logs",
       titleAr: "مختبر التحليل العميق",
       description:
-        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات ��لى المستوى الجزيئي",
+        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات على المستوى الجزيئي",
       icon: Search,
       color: "from-teal-500 via-cyan-500 to-blue-600",
       level: "EXPERT" as const,
@@ -431,7 +432,7 @@ const Index = () => {
         "ت��ارير منتجة": 2847,
         "دقة التحليل": "99.97%",
         "أبعاد مستكشفة": 11,
-        "ذكاء مكتسب": "∞",
+        "ذك��ء مكتسب": "∞",
       },
     },
   ];
@@ -637,7 +638,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
               <Shield className="w-8 h-8 text-red-500 mx-auto mb-2 group-hover:animate-pulse" />
-              <h4 className="font-semibold text-sm">أدوات الأمان</h4>
+              <h4 className="font-semibold text-sm">أ��وات الأمان</h4>
               <p className="text-xs text-muted-foreground">4 أدوات متوفرة</p>
             </div>
 
@@ -672,7 +673,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-rainbow">
-                    Omega Update 1.1 - النقلة التطويرية الك��رى
+                    Omega Update 1.1 - النقلة التطويرية الكبرى
                   </h3>
                   <p className="text-muted-foreground">
                     من الكمال إلى ما وراء الخيال • 10 ميزات ثورية قادمة

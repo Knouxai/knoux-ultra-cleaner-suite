@@ -4,8 +4,6 @@ import {
   Orbit,
   Telescope,
   Satellite,
-  Galaxy,
-  Planet,
   Star,
   Comet,
   Sparkles,

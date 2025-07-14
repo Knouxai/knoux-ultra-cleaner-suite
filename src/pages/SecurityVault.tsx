@@ -162,7 +162,7 @@ const SecurityVault = () => {
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold neon-glow">خزنة الأمان</h1>
+                <h1 className="text-3xl font-bold neon-glow">خزنة ال��مان</h1>
                 <p className="text-muted-foreground">
                   حماية شاملة ضد التهديدات والبرمجيات الخبيثة
                 </p>
@@ -427,6 +427,38 @@ const SecurityVault = () => {
             </Card>
           ))}
         </div>
+
+        {/* أدوات الأمان المتقدمة */}
+        <Card className="glass-card mt-8">
+          <CardHeader>
+            <CardTitle className="flex items-center space-x-2">
+              <Shield className="w-5 h-5 text-red-500" />
+              <span>أدوات الأمان المتقدمة</span>
+              <Badge
+                variant="outline"
+                className="bg-gradient-to-r from-red-500/10 to-pink-500/10"
+              >
+                {securityTools.length} أداة متوفرة
+              </Badge>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {securityTools.slice(0, 6).map((tool) => (
+                <AdvancedToolCard key={tool.id} tool={tool} />
+              ))}
+            </div>
+
+            <div className="mt-6 text-center">
+              <Button
+                onClick={() => navigate("/advanced-tools-hub")}
+                className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-3"
+              >
+                عرض جميع أدوات الأمان
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

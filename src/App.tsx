@@ -34,6 +34,7 @@ const App = () => (
           <Route path="/security-vault" element={<SecurityVault />} />
           <Route path="/deep-analysis-logs" element={<DeepAnalysisLogs />} />
           <Route path="/advanced-tools-lab" element={<AdvancedToolsLab />} />
+          <Route path="/advanced-tools-hub" element={<AdvancedToolsHub />} />
           <Route path="/knoux-ultra-hub" element={<KnouxUltraHub />} />
           <Route path="/cosmic-tools-lab" element={<CosmicToolsLab />} />
           <Route path="/settings" element={<Settings />} />

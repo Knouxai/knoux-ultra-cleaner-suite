@@ -12,6 +12,7 @@ import SecurityVault from "./pages/SecurityVault";
 import DeepAnalysisLogs from "./pages/DeepAnalysisLogs";
 import AdvancedToolsLab from "./pages/AdvancedToolsLab";
 import KnouxUltraHub from "./pages/KnouxUltraHub";
+import CosmicToolsLab from "./pages/CosmicToolsLab";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 

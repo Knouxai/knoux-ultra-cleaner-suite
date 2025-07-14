@@ -75,7 +75,7 @@ const Index = () => {
         "تحليل صحة النظام AI",
         "التنبؤ بالأعطال المستقبلية",
         "مراقبة الموارد الحيوية",
-        "توصيات الصيانة الذكية",
+        "ت��صيات الصيانة الذكية",
         "فحص صحة البطارية",
         "التحليل البيئي المتقدم",
         "نظام الإنذار المبكر",
@@ -116,7 +116,7 @@ const Index = () => {
         "مشاكل حُلت": 2847,
         "توقعات دقيقة": 156,
         "وقت الاستجابة": "0.3ms",
-        "دقة التشخيص": "99.7%",
+        "دقة ال��شخيص": "99.7%",
         "عمليات ناجحة": 15420,
         "طاقة AI": "∞",
       },
@@ -382,7 +382,7 @@ const Index = () => {
         "عرض السجلات الزمنية",
         "تتبع تغييرات الكموم",
         "تحليل التطبيقات العصبي",
-        "كشف الملفات المكررة الكمي",
+        "كش�� الملفات المكررة الكمي",
         "سجل النظام AI",
         "تحليل البصمة الرقمية",
         "رؤية الأبعاد المخفية",
@@ -596,6 +596,59 @@ const Index = () => {
                   درع الحماية الكمي نشط ويحمي نظامك من جميع التهديدات
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* الوصول السريع للأدوات المتقدمة */}
+        <div className="glass-card p-6 rounded-2xl mt-8">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center pulse-glow">
+                <Settings className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold neon-glow">
+                  مركز الأدوات المتقدمة
+                </h3>
+                <p className="text-muted-foreground">
+                  أدوات متخصصة وكونية للمحترفين
+                </p>
+              </div>
+            </div>
+
+            <Button
+              onClick={() => navigate("/advanced-tools-hub")}
+              className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-6 py-3"
+            >
+              <Settings className="w-4 h-4 mr-2" />
+              فتح مدير الأدوات
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <Shield className="w-8 h-8 text-red-500 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">أدوات الأمان</h4>
+              <p className="text-xs text-muted-foreground">4 أدوات متوفرة</p>
+            </div>
+
+            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <Zap className="w-8 h-8 text-green-500 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">تحسين الأداء</h4>
+              <p className="text-xs text-muted-foreground">3 أدوات متوفرة</p>
+            </div>
+
+            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <Globe className="w-8 h-8 text-blue-500 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">أدوات الشبكة</h4>
+              <p className="text-xs text-muted-foreground">2 أدوات متوفرة</p>
+            </div>
+
+            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <Crown className="w-8 h-8 text-yellow-500 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">أدوات كونية</h4>
+              <p className="text-xs text-muted-foreground">2 أدوات متوفرة</p>
             </div>
           </div>
         </div>

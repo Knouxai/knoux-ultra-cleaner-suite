@@ -165,7 +165,7 @@ const Settings = () => {
     setHasUnsavedChanges(true);
   }, [settings]);
 
-  const updateSetting = (key: string, value: any) => {
+  const updateSetting = (key: string, value: unknown) => {
     setSettings((prev) => ({ ...prev, [key]: value }));
   };
 
@@ -483,7 +483,7 @@ const Settings = () => {
                     <div>
                       <Label>الحفظ التلقائي</Label>
                       <p className="text-xs text-gray-400">
-                        حفظ الإعدادات تلقائياً
+                        حفظ الإعدادات تلقا��ياً
                       </p>
                     </div>
                     <Switch
@@ -834,7 +834,7 @@ const Settings = () => {
 
                   <div className="flex items-center justify-between">
                     <div>
-                      <Label>المهام الخلفية</Label>
+                      <Label>المه��م الخلفية</Label>
                       <p className="text-xs text-gray-400">
                         تشغيل العمليات في الخلفية
                       </p>

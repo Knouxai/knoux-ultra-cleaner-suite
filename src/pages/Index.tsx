@@ -89,7 +89,7 @@ const Index = () => {
         "التحليل البيئي المتقدم",
         "نظام الإنذار المبكر",
         "التشخيص الجزيئي",
-        "إصلاح الأخطاء تلقائياً",
+        "إصلاح الأ��طاء تلقائياً",
       ],
       actions: [
         {
@@ -122,7 +122,7 @@ const Index = () => {
         },
       ],
       stats: {
-        "مشاك�� حُلت": 2847,
+        "مشاكل حُلت": 2847,
         "توقعات دقيقة": 156,
         "وقت الاستجابة": "0.3ms",
         "دقة ال��شخيص": "99.7%",
@@ -278,7 +278,7 @@ const Index = () => {
         {
           id: "auto-update",
           name: "تحديث تلقائي",
-          description: "تحديث شامل",
+          description: "ت��ديث شامل",
           icon: TrendingUp,
           type: "primary" as const,
         },
@@ -421,7 +421,7 @@ const Index = () => {
         {
           id: "data-mine",
           name: "تعدين البيانات",
-          description: "استخراج م��لومات",
+          description: "استخراج معلومات",
           icon: Gem,
           type: "primary" as const,
         },
@@ -494,7 +494,7 @@ const Index = () => {
                     مركز التحكم ��لكوني النشط
                   </h2>
                   <p className="text-gray-400">
-                    جميع الأنظمة تعمل بكفا��ة خارقة
+                    جميع الأنظمة تعمل بكفاءة خارقة
                   </p>
                 </div>
               </div>
@@ -694,6 +694,14 @@ const Index = () => {
               >
                 <Eye className="w-4 h-4 mr-2" />
                 🌌 Matrix View Mode
+              </Button>
+
+              <Button
+                onClick={() => setShowDedupliXAI(true)}
+                className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 hover:from-purple-700 hover:via-pink-600 hover:to-red-600 text-white px-6 py-3"
+              >
+                <Brain className="w-4 h-4 mr-2" />
+                🧠 DedupliX AI™
               </Button>
             </div>
           </div>

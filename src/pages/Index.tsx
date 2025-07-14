@@ -329,11 +329,11 @@ const Index = () => {
         "فحص البرمجيات الخفية",
         "إدارة صلاحيات البعد",
         "سجل التعديلات الزمنية",
-        "حماية الخصوصية المطلقة",
+        "حماية الخصوصية المطلق��",
         "حذف غير قابل للاستعادة",
         "قفل أدوات النظام الكمي",
         "درع الطاقة النشط",
-        "حماية من السفر الزمني",
+        "حماية من السفر الزم��ي",
       ],
       actions: [
         {
@@ -378,7 +378,7 @@ const Index = () => {
       title: "Deep Analysis & Logs",
       titleAr: "مختبر التحليل العميق",
       description:
-        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات على المستوى الجزيئي",
+        "مختبر ت��ليل متقدم يستكشف أعماق النظام ويحلل البيانات على المستوى الجزيئي",
       icon: Search,
       color: "from-teal-500 via-cyan-500 to-blue-600",
       level: "EXPERT" as const,
@@ -658,6 +658,69 @@ const Index = () => {
               <Crown className="w-8 h-8 text-yellow-500 mx-auto mb-2 group-hover:animate-pulse" />
               <h4 className="font-semibold text-sm">أدوات كونية</h4>
               <p className="text-xs text-muted-foreground">2 أدوات متوفرة</p>
+            </div>
+          </div>
+        </div>
+
+        {/* أدوات التحكم المتقدمة */}
+        <div className="glass-card p-6 rounded-2xl mt-8">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-black via-green-500 to-black rounded-xl flex items-center justify-center pulse-glow border border-green-500/50">
+                <Eye className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold neon-glow">
+                  أدوات التحكم الكونية المتقدمة
+                </h3>
+                <p className="text-muted-foreground">
+                  التحكم في الواقع الرقمي والمصفوفات الكونية
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <Button
+                onClick={() => setShowBlackDiamond(true)}
+                className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 hover:from-purple-700 hover:via-pink-700 hover:to-red-700 text-white px-6 py-3"
+              >
+                <Gem className="w-4 h-4 mr-2" />
+                💎 BlackDiamond™
+              </Button>
+
+              <Button
+                onClick={() => setShowMatrixView(true)}
+                className="bg-gradient-to-r from-black via-green-500 to-black hover:from-gray-900 hover:via-green-600 hover:to-gray-900 text-white px-6 py-3 border border-green-500/50"
+              >
+                <Eye className="w-4 h-4 mr-2" />
+                🌌 Matrix View Mode
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <Gem className="w-8 h-8 text-purple-400 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">أدوات BlackDiamond™</h4>
+              <p className="text-xs text-muted-foreground">
+                9 أدوات خارقة سرية
+              </p>
+            </div>
+
+            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <Eye className="w-8 h-8 text-green-400 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">Matrix View Mode</h4>
+              <p className="text-xs text-muted-foreground">
+                واجهة ثلاثية الأبعاد
+              </p>
+            </div>
+
+            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <Brain className="w-8 h-8 text-blue-400 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">التحكم الكوني</h4>
+              <p className="text-xs text-muted-foreground">
+                إدارة الواقع الرقمي
+              </p>
             </div>
           </div>
         </div>

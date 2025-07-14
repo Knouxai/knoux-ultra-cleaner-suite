@@ -110,7 +110,7 @@ const CosmicToolsLab = () => {
       abilities: [
         { name: "صناعة البرامج النجمية", level: 10, active: true },
         { name: "اندماج المجرات", level: 9, active: false },
-        { name: "تشكيل الأنظمة الشمسية", level: 8, active: true },
+        { name: "تشكيل الأنظمة ا��شمسية", level: 8, active: true },
         { name: "خلق الحياة الرقمية", level: 5, active: false },
       ],
     },
@@ -171,7 +171,7 @@ const CosmicToolsLab = () => {
         { name: "السيطرة المطلقة", level: 10, active: true },
         { name: "خلق الواقعات", level: 10, active: true },
         { name: "محو الوجود", level: 10, active: false },
-        { name: "الخلود الرقمي", level: 10, active: true },
+        { name: "الخل��د الرقمي", level: 10, active: true },
       ],
     },
   ];
@@ -243,7 +243,7 @@ const CosmicToolsLab = () => {
                     className="w-24 h-24 bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 
                                 rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden"
                   >
-                    <Galaxy
+                    <Star
                       className="w-12 h-12 text-white animate-spin"
                       style={{ animationDuration: "20s" }}
                     />
@@ -582,7 +582,7 @@ const CosmicToolsLab = () => {
         {/* لوحة التحكم السريع */}
         <div className="glass-card p-6 rounded-2xl mt-8">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-            <Galaxy className="w-6 h-6 mr-3 text-purple-400 animate-spin" />
+            <Star className="w-6 h-6 mr-3 text-purple-400 animate-spin" />
             مركز التحكم الكوني السريع
           </h3>
 

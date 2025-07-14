@@ -170,7 +170,7 @@ export interface Tool {
   statistics: ToolStatistics;
 
   // دالة التنفيذ
-  execute: (params?: any) => Promise<ToolExecutionResult>;
+  execute: (params?: unknown) => Promise<ToolExecutionResult>;
 
   // دالة التحقق من الحالة
   checkAvailability: () => Promise<boolean>;

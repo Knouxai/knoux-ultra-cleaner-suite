@@ -32,6 +32,7 @@ const App = () => (
           <Route path="/security-vault" element={<SecurityVault />} />
           <Route path="/deep-analysis-logs" element={<DeepAnalysisLogs />} />
           <Route path="/advanced-tools-lab" element={<AdvancedToolsLab />} />
+          <Route path="/knoux-ultra-hub" element={<KnouxUltraHub />} />
           <Route path="/settings" element={<Settings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

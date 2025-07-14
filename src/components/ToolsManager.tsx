@@ -82,9 +82,10 @@ const ToolsManager: React.FC<ToolsManagerProps> = ({ className = "" }) => {
   // ترتيب الأدوات
   const sortedTools = [...filteredTools].sort((a, b) => {
     switch (sortBy) {
-      case "name":
+      case "name": {
         return a.name.localeCompare(b.name);
-      case "powerLevel":
+      }
+      case "powerLevel": {
         const powerOrder = [
           "basic",
           "advanced",
@@ -98,14 +99,19 @@ const ToolsManager: React.FC<ToolsManagerProps> = ({ className = "" }) => {
         return (
           powerOrder.indexOf(a.powerLevel) - powerOrder.indexOf(b.powerLevel)
         );
-      case "category":
+      }
+      case "category": {
         return a.category.localeCompare(b.category);
-      case "usage":
+      }
+      case "usage": {
         return b.statistics.timesUsed - a.statistics.timesUsed;
-      case "success":
+      }
+      case "success": {
         return b.statistics.successRate - a.statistics.successRate;
-      default:
+      }
+      default: {
         return 0;
+      }
     }
   });
 

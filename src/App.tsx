@@ -39,6 +39,7 @@ const App = () => (
           <Route path="/knoux-ultra-hub" element={<KnouxUltraHub />} />
           <Route path="/cosmic-tools-lab" element={<CosmicToolsLab />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/omega-roadmap" element={<OmegaRoadmap />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

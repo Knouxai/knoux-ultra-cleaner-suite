@@ -40,7 +40,10 @@ export const defaultConfig: AppConfig = {
   performance: {
     autoCleanEnabled: import.meta.env.VITE_AUTO_CLEAN_ENABLED === "true",
     autoCleanInterval:
-      (import.meta.env.VITE_AUTO_CLEAN_INTERVAL as any) || "weekly",
+      (import.meta.env.VITE_AUTO_CLEAN_INTERVAL as
+        | "daily"
+        | "weekly"
+        | "monthly") || "weekly",
     turboModeAvailable: import.meta.env.VITE_TURBO_MODE_AVAILABLE !== "false",
   },
   security: {

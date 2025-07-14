@@ -179,7 +179,7 @@ export interface Tool {
   checkPermissions: (userLevel: UserPermission) => boolean;
 
   // إعدادات إضافية
-  config?: Record<string, any>;
+  config?: Record<string, unknown>;
 
   // معلومات إضافية
   metadata?: {
@@ -325,7 +325,7 @@ export class ToolsEngine {
       try {
         return JSON.parse(saved);
       } catch {
-        // في حالة فشل التحليل، إرجاع إحصا��يات افتراضية
+        // في حالة فشل التحل��ل، إرجاع إحصائيات افتراضية
       }
     }
 

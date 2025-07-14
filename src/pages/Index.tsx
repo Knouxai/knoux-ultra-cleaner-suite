@@ -264,7 +264,7 @@ const Index = () => {
       status: "ACTIVE" as const,
       route: "/driver-software-hub",
       services: [
-        "تحديث التعريفات الفوري",
+        "تحديث التعريفا�� الفوري",
         "تحليل التوافق الكمي",
         "نسخ احتياطي بعدي",
         "إزالة التعريفات المتحجرة",
@@ -378,7 +378,7 @@ const Index = () => {
       title: "Deep Analysis & Logs",
       titleAr: "مختبر التحليل العميق",
       description:
-        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات على المستوى الجزيئي",
+        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات ع��ى المستوى الجزيئي",
       icon: Search,
       color: "from-teal-500 via-cyan-500 to-blue-600",
       level: "EXPERT" as const,
@@ -406,7 +406,7 @@ const Index = () => {
         },
         {
           id: "molecular-view",
-          name: "��ؤية جزيئية",
+          name: "رؤية جزيئية",
           description: "تحليل دقيق",
           icon: Eye,
           type: "info" as const,
@@ -491,7 +491,7 @@ const Index = () => {
                 <Sparkles className="w-8 h-8 text-purple-400 animate-spin" />
                 <div>
                   <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    مركز التحكم ��لكوني النشط
+                    مركز التحكم ��ل��وني النشط
                   </h2>
                   <p className="text-gray-400">
                     جميع الأنظمة تعمل بكفاءة خارقة
@@ -832,6 +832,12 @@ const Index = () => {
         isActive={showMatrixView}
         onExit={() => setShowMatrixView(false)}
       />
+
+      {showDedupliXAI && (
+        <div className="fixed inset-0 z-50">
+          <DedupliXAI onClose={() => setShowDedupliXAI(false)} />
+        </div>
+      )}
     </div>
   );
 };

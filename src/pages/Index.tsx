@@ -34,6 +34,7 @@ import KnouxHeader from "@/components/KnouxHeader";
 import UltraServiceCard from "@/components/UltraServiceCard";
 import SystemStatus from "@/components/SystemStatus";
 import BlackDiamondModal from "@/components/BlackDiamondModal";
+import KnouxAISidekick from "@/components/KnouxAISidekick";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -261,7 +262,7 @@ const Index = () => {
       route: "/driver-software-hub",
       services: [
         "تحديث التعريفات الفوري",
-        "تحليل التوافق الكمي",
+        "تحليل التوافق الك��ي",
         "نسخ احتياطي بعدي",
         "إزالة التعريفات المتحجرة",
         "ت��ديث البرامج التلقائي",
@@ -614,7 +615,7 @@ const Index = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold neon-glow">
-                  مر��ز الأدوات المتقدمة
+                  مركز الأدوات المتقدمة
                 </h3>
                 <p className="text-muted-foreground">
                   أدوات متخصصة وكونية للمحترفين
@@ -707,7 +708,7 @@ const Index = () => {
                 <Brain className="w-8 h-8 text-red-400 mx-auto mb-2 group-hover:animate-pulse" />
                 <h4 className="font-semibold text-sm">Neural-Sync™</h4>
                 <p className="text-xs text-muted-foreground">
-                  تعلم من ��لوك المستخدم
+                  تعلم من سلوك المستخدم
                 </p>
               </div>
             </div>
@@ -733,7 +734,7 @@ const Index = () => {
               "كنوكس ماشي معاك في رحلة الكون الرقمي 🚀✨"
             </h2>
             <p className="text-gray-300 text-lg">
-              أول نظام ذكاء كوني متكامل في الكون • تقنيات ما وراء ال��ستقبل
+              أول نظام ذكاء كوني متكامل في الكون • تقنيات ما وراء المستقبل
             </p>
           </div>
         </div>

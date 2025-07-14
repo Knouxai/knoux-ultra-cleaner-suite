@@ -176,13 +176,24 @@ const SecurityVault = () => {
                   تهديدات مكتشفة
                 </div>
               </div>
-              <Button
-                onClick={startScan}
-                disabled={isScanning}
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white px-8 py-3"
-              >
-                {isScanning ? "جاري الفحص..." : "فحص شامل"}
-              </Button>
+              <div className="flex items-center space-x-3">
+                <Button
+                  onClick={startScan}
+                  disabled={isScanning}
+                  className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white px-8 py-3"
+                >
+                  {isScanning ? "جاري الفحص..." : "فحص شامل"}
+                </Button>
+
+                <Button
+                  variant="outline"
+                  onClick={() => navigate("/advanced-tools-hub")}
+                  className="glass-button px-6 py-3"
+                >
+                  <Settings className="w-4 h-4 mr-2" />
+                  مدير الأدوات
+                </Button>
+              </div>
             </div>
           </div>
 

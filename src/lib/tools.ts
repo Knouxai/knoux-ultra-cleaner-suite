@@ -212,7 +212,7 @@ export class ToolsEngine {
 
   async executeTool(
     toolId: string,
-    params?: any,
+    params?: unknown,
   ): Promise<ToolExecutionResult> {
     const tool = this.getToolById(toolId);
     if (!tool) {
@@ -235,7 +235,7 @@ export class ToolsEngine {
     if (!isAvailable) {
       return {
         success: false,
-        message: "الأداة غير متوفرة حالياً أو لا تدعم نظامك",
+        message: "الأداة ��ير متوفرة حالياً أو لا تدعم نظامك",
       };
     }
 
@@ -325,7 +325,7 @@ export class ToolsEngine {
       try {
         return JSON.parse(saved);
       } catch {
-        // في حالة فشل التحل��ل، إرجاع إحصائيات افتراضية
+        // في حالة فشل التحليل، إرجاع إحصائيات افتراضية
       }
     }
 

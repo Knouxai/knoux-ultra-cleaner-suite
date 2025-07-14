@@ -120,7 +120,7 @@ const Index = () => {
         "وقت الاستجابة": "0.3ms",
         "دقة ال��شخيص": "99.7%",
         "عمليات ناجحة": 15420,
-        "طاق�� AI": "∞",
+        "طاقة AI": "∞",
       },
     },
     {
@@ -265,7 +265,7 @@ const Index = () => {
         "كشف البرامج الشبحية",
         "تحليل التوافق الجيني",
         "استقدام من بعد آخر",
-        "إصلاح الحم�� النووي",
+        "إصلاح الحمض النووي",
       ],
       actions: [
         {
@@ -318,7 +318,7 @@ const Index = () => {
       status: "ACTIVE" as const,
       route: "/security-vault",
       services: [
-        "إزالة ملفات التجسس الكمية",
+        "إز��لة ملفات التجسس الكمية",
         "فحص البرمجيات الخفية",
         "إدارة صلاحيات البعد",
         "سجل التعديلات الزمنية",
@@ -430,7 +430,7 @@ const Index = () => {
     },
   ];
 
-  // معلومات النظام ال��ية
+  // معلومات النظام الحية
   const liveSystemData = [
     {
       name: "نبض النظام",
@@ -623,7 +623,7 @@ const Index = () => {
               onClick={() => navigate("/advanced-tools-hub")}
               className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-6 py-3"
             >
-              <Settings className="w-4 h-4 mr-2" />
+              <SettingsIcon className="w-4 h-4 mr-2" />
               فتح مدير الأدوات
             </Button>
           </div>
@@ -637,7 +637,7 @@ const Index = () => {
 
             <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
               <Zap className="w-8 h-8 text-green-500 mx-auto mb-2 group-hover:animate-pulse" />
-              <h4 className="font-semibold text-sm">تحسين الأداء</h4>
+              <h4 className="font-semibold text-sm">تحسين ��لأداء</h4>
               <p className="text-xs text-muted-foreground">3 أدوات متوفرة</p>
             </div>
 

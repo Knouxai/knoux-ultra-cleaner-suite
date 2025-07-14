@@ -23,6 +23,8 @@ import {
   HardDrive,
   Battery,
   Wifi,
+  Settings,
+  Globe,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import KnouxHeader from "@/components/KnouxHeader";

@@ -154,7 +154,7 @@ const Index = () => {
         {
           id: "quantum-clean",
           name: "تنظيف كمي",
-          description: "تنظيف متعدد الأبعاد",
+          description: "تنظيف مت��دد الأبعاد",
           icon: Sparkles,
           type: "primary" as const,
         },
@@ -344,7 +344,7 @@ const Index = () => {
         {
           id: "threat-scan",
           name: "فحص التهديدات",
-          description: "كشف الأخطار",
+          description: "كشف الأخط��ر",
           icon: Search,
           type: "info" as const,
         },
@@ -384,10 +384,10 @@ const Index = () => {
       status: "READY" as const,
       route: "/deep-analysis-logs",
       services: [
-        "تحليل القرص الذري",
+        "تحليل القرص ��لذري",
         "رسومات بيانية هولوجرافية",
         "عرض السجلات الزمنية",
-        "تتبع تغييرات الكمو��",
+        "تتبع تغييرات الكموم",
         "تحليل التطبيقات العصبي",
         "كش�� الملفات المكررة الكمي",
         "سجل النظام AI",
@@ -428,7 +428,7 @@ const Index = () => {
         "بيانات محللة": "847 TB",
         "أنماط مكتشفة": 15847,
         "ت��ارير منتجة": 2847,
-        "دقة الت��ليل": "99.97%",
+        "دقة التحليل": "99.97%",
         "أبعاد مستكشفة": 11,
         "ذكاء مكتسب": "∞",
       },
@@ -732,7 +732,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-blue-600/10 animate-pulse" />
           <div className="relative z-10">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-2">
-              "كنوكس ماشي معاك في ��حلة الكون الرقمي 🚀✨"
+              "كنوكس ماشي معاك في رحلة الكون الرقمي 🚀✨"
             </h2>
             <p className="text-gray-300 text-lg">
               أول نظام ذكاء كوني متكامل في الكون • تقنيات ما وراء المستقبل
@@ -744,6 +744,12 @@ const Index = () => {
       <BlackDiamondModal
         isOpen={showBlackDiamond}
         onClose={() => setShowBlackDiamond(false)}
+      />
+
+      <KnouxAISidekick
+        currentTool="الصفحة الرئيسية"
+        isVisible={showAISidekick}
+        onToggle={() => setShowAISidekick(!showAISidekick)}
       />
     </div>
   );

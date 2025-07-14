@@ -42,6 +42,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
+import DedupliXAI from "@/components/DedupliXAI";
 
 const KnouxUltraHub = () => {
   const [activeHologram, setActiveHologram] = useState<string | null>(null);
@@ -123,7 +124,7 @@ const KnouxUltraHub = () => {
         },
         {
           name: "حماية كمية",
-          desc: "درع ��ماية من البرمجيات الخبيثة",
+          desc: "درع ��ماية من البر��جيات الخبيثة",
           active: true,
         },
         { name: "ضغط الفراغ", desc: "استخراج مساحة من العدم", active: false },
@@ -165,7 +166,7 @@ const KnouxUltraHub = () => {
       abilities: [
         { name: "تفكيك ذري", desc: "تحليل البرامج للذرات", active: false },
         { name: "إعادة البناء", desc: "بناء نظام محسن", active: true },
-        { name: "بلازما التنظيف", desc: "تنظيف بطاقة البلا��ما", active: true },
+        { name: "بلازما التنظيف", desc: "تنظيف بطاقة البلازما", active: true },
         {
           name: "الاندماج النووي",
           desc: "دمج البرامج المتشابهة",
@@ -357,7 +358,7 @@ const KnouxUltraHub = () => {
         <div className="space-y-2 mb-4">
           <div className="text-sm font-semibold text-gray-300 flex items-center">
             <Target className="w-4 h-4 mr-2" />
-            القدرات الخا��قة
+            القدرات الخارقة
           </div>
           {service.abilities.slice(0, 2).map((ability, i) => (
             <div

@@ -329,11 +329,11 @@ const Index = () => {
         "فحص البرمجيات الخفية",
         "إدارة صلاحيات البعد",
         "سجل التعديلات الزمنية",
-        "حماية الخصوصية المطلق��",
+        "حماية الخصوصية المطلقة",
         "حذف غير قابل للاستعادة",
         "قفل أدوات النظام الكمي",
         "درع الطاقة النشط",
-        "حماية من السفر الزم��ي",
+        "حماية من السفر الزمني",
       ],
       actions: [
         {
@@ -378,7 +378,7 @@ const Index = () => {
       title: "Deep Analysis & Logs",
       titleAr: "مختبر التحليل العميق",
       description:
-        "مختبر ت��ليل متقدم يستكشف أعماق النظام ويحلل البيانات على المستوى الجزيئي",
+        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات على المستوى الجزيئي",
       icon: Search,
       color: "from-teal-500 via-cyan-500 to-blue-600",
       level: "EXPERT" as const,
@@ -491,7 +491,7 @@ const Index = () => {
                 <Sparkles className="w-8 h-8 text-purple-400 animate-spin" />
                 <div>
                   <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    مركز التحكم الكوني النشط
+                    مركز التحكم ��لكوني النشط
                   </h2>
                   <p className="text-gray-400">
                     جميع الأنظمة تعمل بكفاءة خارقة
@@ -703,7 +703,7 @@ const Index = () => {
               <Gem className="w-8 h-8 text-purple-400 mx-auto mb-2 group-hover:animate-pulse" />
               <h4 className="font-semibold text-sm">أدوات BlackDiamond™</h4>
               <p className="text-xs text-muted-foreground">
-                9 أدوات خارقة سرية
+                9 أدوات خارق�� سرية
               </p>
             </div>
 
@@ -815,6 +815,11 @@ const Index = () => {
         currentTool="الصفحة الرئيسية"
         isVisible={showAISidekick}
         onToggle={() => setShowAISidekick(!showAISidekick)}
+      />
+
+      <MatrixViewMode
+        isActive={showMatrixView}
+        onExit={() => setShowMatrixView(false)}
       />
     </div>
   );

@@ -83,11 +83,14 @@ export class KnouxDiagnostics {
       recommendations.push("Enable RAM Crystalizer™ for optimization");
     }
 
-    if (systemHealth.storage > 90) {
+    if (systemHealth.storage > 85) {
       errors.push(
         `Storage critically low: ${100 - systemHealth.storage}% free`,
       );
       recommendations.push("Run Hyper Clean Engine immediately");
+    } else if (systemHealth.storage > 75) {
+      warnings.push(`Storage getting low: ${100 - systemHealth.storage}% free`);
+      recommendations.push("Consider running cleanup soon");
     }
 
     if (systemHealth.battery < 20) {

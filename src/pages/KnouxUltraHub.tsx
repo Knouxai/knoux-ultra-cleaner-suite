@@ -86,7 +86,7 @@ const KnouxUltraHub = () => {
         },
         {
           name: "تحليل المحتوى العميق",
-          desc: "مقارنة النصوص والأك��اد",
+          desc: "مقارنة النصوص والأكواد",
           active: true,
         },
         {
@@ -154,7 +154,7 @@ const KnouxUltraHub = () => {
     },
     {
       id: "plasma-forge",
-      title: "مطرقة ال����ازما الخارقة",
+      title: "مطرقة ال��لازما الخارقة",
       subtitle: "Plasma Forge Hammer",
       description:
         "أداة قوية لتفكيك وإعادة بناء مكونات النظام على المستوى الذري",
@@ -218,7 +218,7 @@ const KnouxUltraHub = () => {
       abilities: [
         {
           name: "حفظ نقاط الزمن",
-          desc: "إنشاء نقاط استعادة مثالية",
+          desc: "إنشاء ن��اط استعادة مثالية",
           active: true,
         },
         { name: "الرجوع بالزمن", desc: "إلغاء أي تغيير حدث", active: true },
@@ -242,7 +242,7 @@ const KnouxUltraHub = () => {
       abilities: [
         { name: "إعادة تشكيل الواقع", desc: "تغيير بنية النظام", active: true },
         { name: "خلق عوالم", desc: "إنشاء بيئات افتراضية", active: false },
-        { name: "تحويل المادة", desc: "تح��يل نوع الملفات", active: true },
+        { name: "تحويل المادة", desc: "تحويل نوع الملفات", active: true },
         { name: "السيطرة المطلقة", desc: "تحكم كامل في النظام", active: true },
       ],
       stats: { realities_shaped: 3, universes_created: 1, divine_power: 100 },
@@ -631,6 +631,13 @@ const KnouxUltraHub = () => {
           </div>
         </div>
       </div>
+
+      {/* DedupliX AI Modal */}
+      {showDedupliXAI && (
+        <div className="fixed inset-0 z-50">
+          <DedupliXAI onClose={() => setShowDedupliXAI(false)} />
+        </div>
+      )}
     </div>
   );
 };

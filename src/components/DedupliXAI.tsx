@@ -438,7 +438,7 @@ const DedupliXAI: React.FC<DedupliXAIProps> = ({ onClose }) => {
                 DedupliX AI™
               </h1>
               <p className="text-xl text-gray-300 mt-2">
-                ذكاء خرافي لإز��لة التكرار، بأي شكل وبأي مكان، أوفلاين تماماً
+                ذكاء خرافي لإزالة التكرار، بأي شكل وبأي مكان، أوفلاين تماماً
               </p>
             </div>
           </div>
@@ -790,7 +790,7 @@ const DedupliXAI: React.FC<DedupliXAIProps> = ({ onClose }) => {
                               {group.type === "exact" ? (
                                 <Copy className="w-6 h-6 text-red-400" />
                               ) : group.type === "similar" ? (
-                                <Compare className="w-6 h-6 text-yellow-400" />
+                                <ArrowLeftRight className="w-6 h-6 text-yellow-400" />
                               ) : (
                                 <Layers className="w-6 h-6 text-blue-400" />
                               )}

@@ -100,7 +100,7 @@ const CosmicToolsLab = () => {
       nameEn: "Galactic Cosmic Forge",
       description:
         "ورشة عمل كونية لصناعة وتطوير البرامج باستخدام طاقة النجوم والمجرات",
-      icon: Galaxy,
+      icon: Star,
       constellation: "Creation",
       color: "from-orange-500 via-red-500 to-pink-600",
       rarity: "MYTHIC",

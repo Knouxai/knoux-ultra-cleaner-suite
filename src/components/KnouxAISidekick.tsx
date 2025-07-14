@@ -55,7 +55,10 @@ const KnouxAISidekick: React.FC<KnouxAISidekickProps> = ({
     const message = userMessage.toLowerCase();
 
     // Context-aware responses based on current tool
-    const toolResponses: Record<string, any> = {
+    const toolResponses: Record<
+      string,
+      Record<string, { content: string; suggestions: string[] }>
+    > = {
       عام: {
         مرحبا: {
           content:

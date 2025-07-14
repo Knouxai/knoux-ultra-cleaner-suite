@@ -15,6 +15,8 @@ import AdvancedToolsHub from "./pages/AdvancedToolsHub";
 import KnouxUltraHub from "./pages/KnouxUltraHub";
 import CosmicToolsLab from "./pages/CosmicToolsLab";
 import Settings from "./pages/Settings";
+import OmegaRoadmap from "./pages/OmegaRoadmap";
+import DedupliXAIPage from "./pages/DedupliXAIPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +40,8 @@ const App = () => (
           <Route path="/knoux-ultra-hub" element={<KnouxUltraHub />} />
           <Route path="/cosmic-tools-lab" element={<CosmicToolsLab />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/omega-roadmap" element={<OmegaRoadmap />} />
+          <Route path="/deduplix-ai" element={<DedupliXAIPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

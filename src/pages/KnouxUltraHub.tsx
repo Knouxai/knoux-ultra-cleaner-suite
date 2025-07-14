@@ -32,6 +32,9 @@ import {
   Sun,
   Moon,
   Cloud,
+  Search,
+  Fingerprint,
+  Trash2,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -39,6 +42,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
+import DedupliXAI from "@/components/DedupliXAI";
 
 const KnouxUltraHub = () => {
   const [activeHologram, setActiveHologram] = useState<string | null>(null);
@@ -46,6 +50,7 @@ const KnouxUltraHub = () => {
   const [quantumMode, setQuantumMode] = useState(false);
   const [ultraBoost, setUltraBoost] = useState([85]);
   const [neuralSync, setNeuralSync] = useState(true);
+  const [showDedupliXAI, setShowDedupliXAI] = useState(false);
 
   // تأثير النبضات الحية للنظام
   useEffect(() => {
@@ -56,6 +61,46 @@ const KnouxUltraHub = () => {
   }, []);
 
   const hyperServices = [
+    {
+      id: "deduplix-ai",
+      title: "DedupliX AI™ إزالة التكرارات",
+      subtitle: "KNOUX DedupliX AI™ Engine",
+      description:
+        "ذكاء خرافي أوفلاين لإزالة التكرارات بأي شكل وبأي مكان - صور، مستندات، صوت، فيديو",
+      icon: Brain,
+      color: "from-purple-600 via-pink-500 to-red-500",
+      glowColor: "shadow-purple-500/50",
+      level: "TRANSCENDENT",
+      power: 25000,
+      status: "QUANTUM",
+      abilities: [
+        {
+          name: "فحص البصمة الذكي",
+          desc: "SHA256 + محتوى + بيانات وصفية",
+          active: true,
+        },
+        {
+          name: "مقارنة بصرية AI",
+          desc: "كشف الصور المتشابهة بالذكاء",
+          active: true,
+        },
+        {
+          name: "تحليل المحتوى العميق",
+          desc: "مقارنة النصوص والأكواد",
+          active: true,
+        },
+        {
+          name: "دمج تلقائي ذكي",
+          desc: "معالجة التكرارات تلقائياً",
+          active: false,
+        },
+      ],
+      stats: {
+        duplicates_found: 15420,
+        space_saved: "127.3 GB",
+        accuracy: 96.8,
+      },
+    },
     {
       id: "quantum-cleaner",
       title: "منظف الكموم الفائق",
@@ -146,7 +191,11 @@ const KnouxUltraHub = () => {
         { name: "المشي البعدي", desc: "الوصول للملفات المخفية", active: true },
         { name: "رؤية الفراغ", desc: "كشف المساحات الفارغة", active: true },
         { name: "التلاعب الزمني", desc: "تغيير تواريخ الملفات", active: false },
-        { name: "النقل الكمي", desc: "نقل البيانات عبر الأبعاد", active: true },
+        {
+          name: "النقل الكمي",
+          desc: "نقل البيانات عبر ا��أبعاد",
+          active: true,
+        },
       ],
       stats: {
         dimensions_explored: 7,
@@ -169,7 +218,7 @@ const KnouxUltraHub = () => {
       abilities: [
         {
           name: "حفظ نقاط الزمن",
-          desc: "إنشاء نقاط استعادة مثالية",
+          desc: "إنشاء ن��اط استعادة مثالية",
           active: true,
         },
         { name: "الرجوع بالزمن", desc: "إلغاء أي تغيير حدث", active: true },
@@ -180,7 +229,7 @@ const KnouxUltraHub = () => {
     },
     {
       id: "reality-shaper",
-      title: "مُشكل الواقع الرقمي",
+      title: "مُشكل الواقع ال��قمي",
       subtitle: "Digital Reality Shaper",
       description:
         "القدرة على إعادة تشكيل واقع النظام وخلق بيئات افتراضية مثالية",
@@ -226,9 +275,13 @@ const KnouxUltraHub = () => {
                   backdrop-blur-xl hover:backdrop-blur-2xl
                   ${activeHologram === service.id ? "ring-4 ring-white/50 scale-105" : ""}
                   ${service.glowColor} hover:shadow-2xl`}
-      onClick={() =>
-        setActiveHologram(activeHologram === service.id ? null : service.id)
-      }
+      onClick={() => {
+        if (service.id === "deduplix-ai") {
+          setShowDedupliXAI(true);
+        } else {
+          setActiveHologram(activeHologram === service.id ? null : service.id);
+        }
+      }}
     >
       {/* خلفية الهولوجرام */}
       <div
@@ -534,7 +587,7 @@ const KnouxUltraHub = () => {
         <div className="glass-card p-6 rounded-2xl">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center">
             <Rocket className="w-6 h-6 mr-3 text-blue-400" />
-            مركز التحكم السريع
+            ��ركز التحكم السريع
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -578,6 +631,13 @@ const KnouxUltraHub = () => {
           </div>
         </div>
       </div>
+
+      {/* DedupliX AI Modal */}
+      {showDedupliXAI && (
+        <div className="fixed inset-0 z-50">
+          <DedupliXAI onClose={() => setShowDedupliXAI(false)} />
+        </div>
+      )}
     </div>
   );
 };

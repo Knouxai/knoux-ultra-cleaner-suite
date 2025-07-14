@@ -25,12 +25,16 @@ import {
   Wifi,
   Settings,
   Globe,
+  Eye,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import KnouxHeader from "@/components/KnouxHeader";
 import UltraServiceCard from "@/components/UltraServiceCard";
 import SystemStatus from "@/components/SystemStatus";
 import BlackDiamondModal from "@/components/BlackDiamondModal";
+import KnouxAISidekick from "@/components/KnouxAISidekick";
+import MatrixViewMode from "@/components/MatrixViewMode";
+import DedupliXAI from "@/components/DedupliXAI";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -41,6 +45,9 @@ const Index = () => {
   const [showBlackDiamond, setShowBlackDiamond] = useState(false);
   const [systemPulse, setSystemPulse] = useState(98);
   const [activeHolo, setActiveHolo] = useState<string | null>(null);
+  const [showAISidekick, setShowAISidekick] = useState(true);
+  const [showMatrixView, setShowMatrixView] = useState(false);
+  const [showDedupliXAI, setShowDedupliXAI] = useState(false);
   const navigate = useNavigate();
 
   // تأثير النبض الحي للنظام
@@ -77,12 +84,12 @@ const Index = () => {
         "تحليل صحة النظام AI",
         "التنبؤ بالأعطال المستقبلية",
         "مراقبة الموارد الحيوية",
-        "ت��صيات الصيانة الذكية",
+        "ت��صيات ال��يانة الذكية",
         "فحص صحة البطارية",
         "التحليل البيئي المتقدم",
         "نظام الإنذار المبكر",
         "التشخيص الجزيئي",
-        "إصلاح الأخطاء تلقائياً",
+        "إصلاح الأ��طاء تلقائياً",
       ],
       actions: [
         {
@@ -162,7 +169,7 @@ const Index = () => {
         },
         {
           id: "auto-schedule",
-          name: "جدولة ذكية",
+          name: "ج��ولة ذكية",
           description: "تنظيف تلقائي",
           icon: Activity,
           type: "secondary" as const,
@@ -188,7 +195,7 @@ const Index = () => {
       title: "Performance Reactor",
       titleAr: "مفاعل الأداء النووي",
       description:
-        "مفاعل طاقة متقدم يولد قوة حاسوبية خارقة ويحسن الأداء باستخدام تقنيات الاندماج",
+        "مفاعل طاقة متقدم يولد قوة ��اسوبية خارقة ويحسن الأداء باستخدام تقنيات الاندماج",
       icon: Rocket,
       color: "from-orange-500 via-red-500 to-pink-600",
       level: "EXPERT" as const,
@@ -240,7 +247,7 @@ const Index = () => {
         "سرعة المعالج": "+340%",
         "ذاكرة محررة": "15.8 GB",
         "وقت الإقلاع": "3.2s",
-        "طاقة مولدة": "2.4 TW",
+        "طاقة م��لدة": "2.4 TW",
         "عمليات/ثانية": "∞",
         "كفاءة نووية": "99.99%",
       },
@@ -257,13 +264,13 @@ const Index = () => {
       status: "ACTIVE" as const,
       route: "/driver-software-hub",
       services: [
-        "تحديث التعريفات الفوري",
+        "تحديث التعريفا�� الفوري",
         "تحليل التوافق الكمي",
         "نسخ احتياطي بعدي",
         "إزالة التعريفات المتحجرة",
-        "تحديث البرامج التلقائي",
+        "ت��ديث البرامج التلقائي",
         "كشف البرامج الشبحية",
-        "تحليل التوافق الجيني",
+        "تحليل التوافق الجين��",
         "استقدام من بعد آخر",
         "إصلاح الحمض النووي",
       ],
@@ -271,7 +278,7 @@ const Index = () => {
         {
           id: "auto-update",
           name: "تحديث تلقائي",
-          description: "تحديث شامل",
+          description: "ت��ديث شامل",
           icon: TrendingUp,
           type: "primary" as const,
         },
@@ -371,7 +378,7 @@ const Index = () => {
       title: "Deep Analysis & Logs",
       titleAr: "مختبر التحليل العميق",
       description:
-        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات على المستوى الجزيئي",
+        "مختبر تحليل متقدم يستكشف أعماق النظام ويحلل البيانات ع��ى المستوى الجزيئي",
       icon: Search,
       color: "from-teal-500 via-cyan-500 to-blue-600",
       level: "EXPERT" as const,
@@ -386,7 +393,7 @@ const Index = () => {
         "تحليل التطبيقات العصبي",
         "كش�� الملفات المكررة الكمي",
         "سجل النظام AI",
-        "تحليل البصمة الرقمية",
+        "تحل��ل البصمة الرقمية",
         "رؤية الأبعاد المخفية",
       ],
       actions: [
@@ -422,10 +429,10 @@ const Index = () => {
       stats: {
         "بيانات محللة": "847 TB",
         "أنماط مكتشفة": 15847,
-        "تقارير منتجة": 2847,
+        "ت��ارير منتجة": 2847,
         "دقة التحليل": "99.97%",
         "أبعاد مستكشفة": 11,
-        "ذكاء مكتسب": "∞",
+        "ذك��ء مكتسب": "∞",
       },
     },
   ];
@@ -474,7 +481,7 @@ const Index = () => {
           onSettingsClick={() => navigate("/settings")}
         />
 
-        {/* شريط الحالة المتقدم */}
+        {/* شريط الحالة ا��متقدم */}
         <div className="glass-card rounded-2xl p-6 mb-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-purple-600/10 animate-pulse" />
 
@@ -484,7 +491,7 @@ const Index = () => {
                 <Sparkles className="w-8 h-8 text-purple-400 animate-spin" />
                 <div>
                   <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    مركز التحكم الكوني النشط
+                    مركز التحكم ��ل��وني النشط
                   </h2>
                   <p className="text-gray-400">
                     جميع الأنظمة تعمل بكفاءة خارقة
@@ -631,7 +638,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
               <Shield className="w-8 h-8 text-red-500 mx-auto mb-2 group-hover:animate-pulse" />
-              <h4 className="font-semibold text-sm">أدوات الأمان</h4>
+              <h4 className="font-semibold text-sm">أ��وات الأمان</h4>
               <p className="text-xs text-muted-foreground">4 أدوات متوفرة</p>
             </div>
 
@@ -655,6 +662,150 @@ const Index = () => {
           </div>
         </div>
 
+        {/* أدوات التحكم المتقدمة */}
+        <div className="glass-card p-6 rounded-2xl mt-8">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-black via-green-500 to-black rounded-xl flex items-center justify-center pulse-glow border border-green-500/50">
+                <Eye className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold neon-glow">
+                  أدوات التحكم الكونية المتقدمة
+                </h3>
+                <p className="text-muted-foreground">
+                  التحكم في الواقع الرقمي والمصفوفات الكونية
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <Button
+                onClick={() => setShowBlackDiamond(true)}
+                className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 hover:from-purple-700 hover:via-pink-700 hover:to-red-700 text-white px-6 py-3"
+              >
+                <Gem className="w-4 h-4 mr-2" />
+                💎 BlackDiamond™
+              </Button>
+
+              <Button
+                onClick={() => setShowMatrixView(true)}
+                className="bg-gradient-to-r from-black via-green-500 to-black hover:from-gray-900 hover:via-green-600 hover:to-gray-900 text-white px-6 py-3 border border-green-500/50"
+              >
+                <Eye className="w-4 h-4 mr-2" />
+                🌌 Matrix View Mode
+              </Button>
+
+              <Button
+                onClick={() => setShowDedupliXAI(true)}
+                className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 hover:from-purple-700 hover:via-pink-600 hover:to-red-600 text-white px-6 py-3"
+              >
+                <Brain className="w-4 h-4 mr-2" />
+                🧠 DedupliX AI™
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <Gem className="w-8 h-8 text-purple-400 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">أدوات BlackDiamond™</h4>
+              <p className="text-xs text-muted-foreground">
+                9 أدوات خارق�� سرية
+              </p>
+            </div>
+
+            <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+              <Eye className="w-8 h-8 text-green-400 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">Matrix View Mode</h4>
+              <p className="text-xs text-muted-foreground">
+                واجهة ثلاثية الأبعاد
+              </p>
+            </div>
+
+            <div
+              className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group"
+              onClick={() => setShowDedupliXAI(true)}
+            >
+              <Brain className="w-8 h-8 text-purple-400 mx-auto mb-2 group-hover:animate-pulse" />
+              <h4 className="font-semibold text-sm">DedupliX AI™</h4>
+              <p className="text-xs text-muted-foreground">
+                إزالة التكرارات الذكية
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* خارطة التطوير القادمة - Omega Update 1.1 */}
+        <div className="glass-card p-6 rounded-2xl mt-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 animate-pulse" />
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-xl flex items-center justify-center pulse-glow">
+                  <Rocket className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-rainbow">
+                    Omega Update 1.1 - النقلة التطويرية الكبرى
+                  </h3>
+                  <p className="text-muted-foreground">
+                    من الكمال إلى ما وراء الخيال • 10 ميزات ثورية قادمة
+                  </p>
+                </div>
+              </div>
+
+              <Button
+                onClick={() => navigate("/omega-roadmap")}
+                className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 text-white px-6 py-3 cosmic-button"
+              >
+                <Star className="w-4 h-4 mr-2" />
+                استكشف المستقبل
+              </Button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+                <Bot className="w-8 h-8 text-purple-400 mx-auto mb-2 group-hover:animate-pulse" />
+                <h4 className="font-semibold text-sm">مساعد ذكي Knoux-AI</h4>
+                <p className="text-xs text-muted-foreground">
+                  محادثة AI في كل أداة
+                </p>
+              </div>
+
+              <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+                <Eye className="w-8 h-8 text-pink-400 mx-auto mb-2 group-hover:animate-pulse" />
+                <h4 className="font-semibold text-sm">Matrix View Mode</h4>
+                <p className="text-xs text-muted-foreground">
+                  واجهة ثلاثية الأبعاد
+                </p>
+              </div>
+
+              <div
+                className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group"
+                onClick={() => setShowDedupliXAI(true)}
+              >
+                <Brain className="w-8 h-8 text-red-400 mx-auto mb-2 group-hover:animate-pulse" />
+                <h4 className="font-semibold text-sm">DedupliX AI™ الجديد!</h4>
+                <p className="text-xs text-muted-foreground">
+                  إزالة التكرارات ب��كاء خارق
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-4 text-center">
+              <p className="text-sm text-gray-400">
+                🚀 التقدم الإجمالي:{" "}
+                <span className="text-purple-400 font-semibold">42%</span> • ⏰
+                موعد الإطلاق:{" "}
+                <span className="text-pink-400 font-semibold">Q2 2025</span> •
+                💎 مستوى التعقيد:{" "}
+                <span className="text-red-400 font-semibold">ما وراء كوني</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* شعار نهائي */}
         <div className="text-center glass-card p-8 rounded-2xl mt-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-blue-600/10 animate-pulse" />
@@ -663,7 +814,7 @@ const Index = () => {
               "كنوكس ماشي معاك في رحلة الكون الرقمي 🚀✨"
             </h2>
             <p className="text-gray-300 text-lg">
-              أول نظام ذكاء كوني متكامل في الكون • تقنيات ما وراء المستقبل
+              أول نظام ��كاء كوني متكامل في الكون • تقنيات ما وراء المستقبل
             </p>
           </div>
         </div>
@@ -673,6 +824,23 @@ const Index = () => {
         isOpen={showBlackDiamond}
         onClose={() => setShowBlackDiamond(false)}
       />
+
+      <KnouxAISidekick
+        currentTool="الصفحة الرئيسية"
+        isVisible={showAISidekick}
+        onToggle={() => setShowAISidekick(!showAISidekick)}
+      />
+
+      <MatrixViewMode
+        isActive={showMatrixView}
+        onExit={() => setShowMatrixView(false)}
+      />
+
+      {showDedupliXAI && (
+        <div className="fixed inset-0 z-50">
+          <DedupliXAI onClose={() => setShowDedupliXAI(false)} />
+        </div>
+      )}
     </div>
   );
 };

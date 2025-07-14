@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +11,7 @@ import DriverSoftwareHub from "./pages/DriverSoftwareHub";
 import SecurityVault from "./pages/SecurityVault";
 import DeepAnalysisLogs from "./pages/DeepAnalysisLogs";
 import AdvancedToolsLab from "./pages/AdvancedToolsLab";
+import KnouxUltraHub from "./pages/KnouxUltraHub";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 

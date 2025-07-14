@@ -32,6 +32,9 @@ import {
   Sun,
   Moon,
   Cloud,
+  Search,
+  Fingerprint,
+  Trash2,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -146,7 +149,11 @@ const KnouxUltraHub = () => {
         { name: "المشي البعدي", desc: "الوصول للملفات المخفية", active: true },
         { name: "رؤية الفراغ", desc: "كشف المساحات الفارغة", active: true },
         { name: "التلاعب الزمني", desc: "تغيير تواريخ الملفات", active: false },
-        { name: "النقل الكمي", desc: "نقل البيانات عبر الأبعاد", active: true },
+        {
+          name: "النقل الكمي",
+          desc: "نقل البيانات عبر ا��أبعاد",
+          active: true,
+        },
       ],
       stats: {
         dimensions_explored: 7,
@@ -180,7 +187,7 @@ const KnouxUltraHub = () => {
     },
     {
       id: "reality-shaper",
-      title: "مُشكل الواقع الرقمي",
+      title: "مُشكل الواقع ال��قمي",
       subtitle: "Digital Reality Shaper",
       description:
         "القدرة على إعادة تشكيل واقع النظام وخلق بيئات افتراضية مثالية",
@@ -534,7 +541,7 @@ const KnouxUltraHub = () => {
         <div className="glass-card p-6 rounded-2xl">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center">
             <Rocket className="w-6 h-6 mr-3 text-blue-400" />
-            مركز التحكم السريع
+            ��ركز التحكم السريع
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

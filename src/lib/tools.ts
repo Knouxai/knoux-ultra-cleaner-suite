@@ -124,7 +124,7 @@ export type UserPermission =
 export interface ToolExecutionResult {
   success: boolean;
   message: string;
-  data?: any;
+  data?: unknown;
   duration?: number;
   affectedFiles?: number;
   freedSpace?: string;
@@ -325,7 +325,7 @@ export class ToolsEngine {
       try {
         return JSON.parse(saved);
       } catch {
-        // في حالة فشل التحليل، إرجاع إحصائيات افتراضية
+        // في حالة فشل التحليل، إرجاع إحصا��يات افتراضية
       }
     }
 

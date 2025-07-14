@@ -40,7 +40,9 @@ setTimeout(() => {
 }, 3000);
 
 // Make reporting available globally for manual access
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 (window as any).KnouxReporting = KnouxReportGenerator.getInstance();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 (window as any).KnouxDiagnostics = KnouxDiagnostics.getInstance();
 
 createRoot(document.getElementById("root")!).render(<App />);

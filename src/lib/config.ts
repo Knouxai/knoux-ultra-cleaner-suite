@@ -48,7 +48,9 @@ export const defaultConfig: AppConfig = {
   },
   security: {
     blackDiamondEnabled: import.meta.env.VITE_BLACK_DIAMOND_ENABLED !== "false",
-    securityLevel: (import.meta.env.VITE_SECURITY_LEVEL as any) || "high",
+    securityLevel:
+      (import.meta.env.VITE_SECURITY_LEVEL as "low" | "medium" | "high") ||
+      "high",
   },
   features: {
     experimentalFeatures: import.meta.env.VITE_EXPERIMENTAL_FEATURES === "true",

@@ -21,6 +21,10 @@ import { useNavigate } from "react-router-dom";
 const SecurityVault = () => {
   const [scanProgress, setScanProgress] = useState(0);
   const [isScanning, setIsScanning] = useState(false);
+  const navigate = useNavigate();
+
+  // أدوات الأمان المتاحة
+  const securityTools = getToolsByCategory("security");
 
   const threats = [
     {
@@ -67,7 +71,7 @@ const SecurityVault = () => {
     },
     {
       app: "Unknown App",
-      permissions: ["ملفات ا��نظام", "شبكة", "تسجيل المفاتيح"],
+      permissions: ["ملفات النظام", "شبكة", "تسجيل المفاتيح"],
       risk: "مشبوه",
       lastUsed: "2025-01-11 12:15",
     },
@@ -83,7 +87,7 @@ const SecurityVault = () => {
       status: "نشط",
     },
     {
-      name: "فحص البرمجيات الخفية",
+      name: "فحص البرمجيات الخ��ية",
       description: "كشف الفيروسات والبرمجيات الخبيثة المخفية",
       icon: Scan,
       threats: { scanned: 45678, detected: 3, cleaned: 3 },

@@ -16,6 +16,7 @@ import KnouxUltraHub from "./pages/KnouxUltraHub";
 import CosmicToolsLab from "./pages/CosmicToolsLab";
 import Settings from "./pages/Settings";
 import OmegaRoadmap from "./pages/OmegaRoadmap";
+import DedupliXAIPage from "./pages/DedupliXAIPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

@@ -50,6 +50,7 @@ const KnouxUltraHub = () => {
   const [quantumMode, setQuantumMode] = useState(false);
   const [ultraBoost, setUltraBoost] = useState([85]);
   const [neuralSync, setNeuralSync] = useState(true);
+  const [showDedupliXAI, setShowDedupliXAI] = useState(false);
 
   // تأثير النبضات الحية للنظام
   useEffect(() => {
@@ -124,7 +125,7 @@ const KnouxUltraHub = () => {
         },
         {
           name: "حماية كمية",
-          desc: "درع ��ماية من البر��جيات الخبيثة",
+          desc: "درع ��ماية من البرمجيات الخبيثة",
           active: true,
         },
         { name: "ضغط الفراغ", desc: "استخراج مساحة من العدم", active: false },

@@ -67,7 +67,7 @@ const Index = () => {
       title: "Health AI Center",
       titleAr: "مركز الصحة الذكي الخارق",
       description:
-        "نظام ذكاء اصطناعي متطور لمراقبة وتحليل صحة النظام مع قدرات التنبؤ الكمية",
+        "نظام ذكاء اصطناعي متطور لمراقب�� وتحليل صحة النظام مع قدرات التنبؤ الكمية",
       icon: Heart,
       color: "from-red-500 via-pink-500 to-purple-600",
       level: "LEGENDARY" as const,
@@ -139,7 +139,7 @@ const Index = () => {
         "تنظيف الملفات المؤقتة",
         "إزالة مخلفات التحديثات",
         "تنظيف المتصفحات العميق",
-        "تحليل الملفات غير المستخدمة",
+        "تحليل الم��فات غير المستخدمة",
         "تنظيف آثار البرامج القديمة",
         "تفريغ الحافظة الذكي",
         "التنظيف التلقائي المجدول",
@@ -179,7 +179,7 @@ const Index = () => {
       stats: {
         "مساحة محررة": "847 GB",
         "ملفات محذوفة": 95847,
-        "سرعة التنظيف": "2.8 GB/s",
+        "سرعة ال��نظيف": "2.8 GB/s",
         "كفاءة الطاقة": "99.9%",
         "عمليات تنظيف": 5627,
         "طاقة كمية": "∞",
@@ -652,6 +652,73 @@ const Index = () => {
               <Crown className="w-8 h-8 text-yellow-500 mx-auto mb-2 group-hover:animate-pulse" />
               <h4 className="font-semibold text-sm">أدوات كونية</h4>
               <p className="text-xs text-muted-foreground">2 أدوات متوفرة</p>
+            </div>
+          </div>
+        </div>
+
+        {/* خارطة التطوير القادمة - Omega Update 1.1 */}
+        <div className="glass-card p-6 rounded-2xl mt-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 animate-pulse" />
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-xl flex items-center justify-center pulse-glow">
+                  <Rocket className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-rainbow">
+                    Omega Update 1.1 - النقلة التطويرية الكبرى
+                  </h3>
+                  <p className="text-muted-foreground">
+                    من الكمال إلى ما وراء الخيال • 10 ميزات ثورية قادمة
+                  </p>
+                </div>
+              </div>
+
+              <Button
+                onClick={() => navigate("/omega-roadmap")}
+                className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 text-white px-6 py-3 cosmic-button"
+              >
+                <Star className="w-4 h-4 mr-2" />
+                استكشف المستقبل
+              </Button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+                <Bot className="w-8 h-8 text-purple-400 mx-auto mb-2 group-hover:animate-pulse" />
+                <h4 className="font-semibold text-sm">مساعد ذكي Knoux-AI</h4>
+                <p className="text-xs text-muted-foreground">
+                  محادثة AI في كل أداة
+                </p>
+              </div>
+
+              <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+                <Eye className="w-8 h-8 text-pink-400 mx-auto mb-2 group-hover:animate-pulse" />
+                <h4 className="font-semibold text-sm">Matrix View Mode</h4>
+                <p className="text-xs text-muted-foreground">
+                  واجهة ثلاثية الأبعاد
+                </p>
+              </div>
+
+              <div className="glass-card p-4 rounded-lg text-center hover:glass-button transition-all cursor-pointer group">
+                <Brain className="w-8 h-8 text-red-400 mx-auto mb-2 group-hover:animate-pulse" />
+                <h4 className="font-semibold text-sm">Neural-Sync™</h4>
+                <p className="text-xs text-muted-foreground">
+                  تعلم من سلوك المستخدم
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-4 text-center">
+              <p className="text-sm text-gray-400">
+                🚀 التقدم الإجمالي:{" "}
+                <span className="text-purple-400 font-semibold">42%</span> • ⏰
+                موعد الإطلاق:{" "}
+                <span className="text-pink-400 font-semibold">Q2 2025</span> •
+                💎 مستوى التعقيد:{" "}
+                <span className="text-red-400 font-semibold">ما وراء كوني</span>
+              </p>
             </div>
           </div>
         </div>

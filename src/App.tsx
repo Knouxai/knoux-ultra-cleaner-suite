@@ -41,6 +41,7 @@ const App = () => (
           <Route path="/cosmic-tools-lab" element={<CosmicToolsLab />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/omega-roadmap" element={<OmegaRoadmap />} />
+          <Route path="/deduplix-ai" element={<DedupliXAIPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

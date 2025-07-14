@@ -24,7 +24,7 @@ import {
   CheckCircle,
   AlertTriangle,
   X,
-  Compare,
+  ArrowLeftRight,
   Copy,
   HardDrive,
   Clock,
@@ -438,7 +438,7 @@ const DedupliXAI: React.FC<DedupliXAIProps> = ({ onClose }) => {
                 DedupliX AI™
               </h1>
               <p className="text-xl text-gray-300 mt-2">
-                ذكاء خرافي لإزالة التكرار، بأي شكل وبأي مكان، أوفلاين تماماً
+                ذكاء خرافي لإز��لة التكرار، بأي شكل وبأي مكان، أوفلاين تماماً
               </p>
             </div>
           </div>

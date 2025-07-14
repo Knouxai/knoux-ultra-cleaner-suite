@@ -60,6 +60,46 @@ const KnouxUltraHub = () => {
 
   const hyperServices = [
     {
+      id: "deduplix-ai",
+      title: "DedupliX AI™ إزالة التكرارات",
+      subtitle: "KNOUX DedupliX AI™ Engine",
+      description:
+        "ذكاء خرافي أوفلاين لإزالة التكرارات بأي شكل وبأي مكان - صور، مستندات، صوت، فيديو",
+      icon: Brain,
+      color: "from-purple-600 via-pink-500 to-red-500",
+      glowColor: "shadow-purple-500/50",
+      level: "TRANSCENDENT",
+      power: 25000,
+      status: "QUANTUM",
+      abilities: [
+        {
+          name: "فحص البصمة الذكي",
+          desc: "SHA256 + محتوى + بيانات وصفية",
+          active: true,
+        },
+        {
+          name: "مقارنة بصرية AI",
+          desc: "كشف الصور المتشابهة بالذكاء",
+          active: true,
+        },
+        {
+          name: "تحليل المحتوى العميق",
+          desc: "مقارنة النصوص والأكواد",
+          active: true,
+        },
+        {
+          name: "دمج تلقائي ذكي",
+          desc: "معالجة التكرارات تلقائياً",
+          active: false,
+        },
+      ],
+      stats: {
+        duplicates_found: 15420,
+        space_saved: "127.3 GB",
+        accuracy: 96.8,
+      },
+    },
+    {
       id: "quantum-cleaner",
       title: "منظف الكموم الفائق",
       subtitle: "Quantum Hyper Cleaner",
@@ -125,7 +165,7 @@ const KnouxUltraHub = () => {
       abilities: [
         { name: "تفكيك ذري", desc: "تحليل البرامج للذرات", active: false },
         { name: "إعادة البناء", desc: "بناء نظام محسن", active: true },
-        { name: "بلازما التنظيف", desc: "تنظيف بطاقة البلازما", active: true },
+        { name: "بلازما التنظيف", desc: "تنظيف بطاقة البلا��ما", active: true },
         {
           name: "الاندماج النووي",
           desc: "دمج البرامج المتشابهة",
@@ -317,7 +357,7 @@ const KnouxUltraHub = () => {
         <div className="space-y-2 mb-4">
           <div className="text-sm font-semibold text-gray-300 flex items-center">
             <Target className="w-4 h-4 mr-2" />
-            القدرات الخارقة
+            القدرات الخا��قة
           </div>
           {service.abilities.slice(0, 2).map((ability, i) => (
             <div
